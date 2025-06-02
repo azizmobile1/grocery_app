@@ -7,7 +7,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_screenutil: ^5.8.4
   cupertino_icons: ^1.0.8
+  flutter_svg: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -20,6 +22,8 @@ flutter:
 
   assets:
    - assets/images/
+   - assets/pngs/
+   - assets/svgs/
   
   fonts:
    - family: Poppins

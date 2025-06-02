@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:grocery_app/screens/welcome_screen.dart';
+import 'package:grocery_app/utils/app_colors.dart';
+import 'package:grocery_app/utils/app_media.dart';
 import 'package:grocery_app/utils/app_text_style.dart';
+import 'package:grocery_app/widgets/build_tap_widget.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -27,18 +32,18 @@ class OnboardingScreenState extends State<OnboardingScreen> {
             },
             controller: pageController,
             children: [
-              buildFirstPage(),
-              buildNextPage(
+              BuildFirstPage(),
+              BuildNextPage(
                 text: "Buy Quality Dairy Products",
-                image: "assets/images/splash_screen_image2.jpg",
+                image: AppMedia.onboarding2,
               ),
-              buildNextPage(
+              BuildNextPage(
                 text: "Buy Premium Quality Fruits",
-                image: "assets/images/splash_screen_image3.jpg",
+                image: AppMedia.onboarding3,
               ),
-              buildNextPage(
+              BuildNextPage(
                 text: "Get Discounts On All Products",
-                image: "assets/images/splash_screen_image4.jpg",
+                image: AppMedia.onboarding4,
               ),
             ],
           ),
@@ -64,23 +69,7 @@ class OnboardingScreenState extends State<OnboardingScreen> {
                   );
                 }
               },
-              child: Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.symmetric(vertical: 18, horizontal: 20),
-                margin: EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.green,
-                ),
-                child: Text(
-                  "Get started",
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontFamily: "Poppins",
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+              child: BuildTapWidget(text: "Get started"),
             ),
           ),
           Align(
@@ -90,11 +79,13 @@ class OnboardingScreenState extends State<OnboardingScreen> {
               children: List.generate(4, (index) {
                 return Container(
                   margin: EdgeInsets.only(right: 10),
-                  height: 10,
-                  width: 10,
+                  height: 10.h,
+                  width: 10.w,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: selectedPage == index ? Colors.green : Colors.white,
+                    borderRadius: BorderRadius.circular(10.r),
+                    color: selectedPage == index
+                        ? AppColors.primary
+                        : AppColors.white,
                   ),
                 );
               }),
@@ -106,17 +97,14 @@ class OnboardingScreenState extends State<OnboardingScreen> {
   }
 }
 
-class buildFirstPage extends StatelessWidget {
-  const buildFirstPage({super.key});
+class BuildFirstPage extends StatelessWidget {
+  const BuildFirstPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(
-          "assets/images/splash_screen_image1.jpg",
-          fit: BoxFit.cover,
-        ),
+        Image.asset(AppMedia.onboarding1, fit: BoxFit.cover),
         Positioned(
           top: 80,
           right: 0,
@@ -127,32 +115,25 @@ class buildFirstPage extends StatelessWidget {
               Text(
                 textAlign: TextAlign.center,
                 "Welcome to",
-                style: AppTextStyle.style,
+                style: AppTextStyle.style1,
               ),
               RichText(
                 text: TextSpan(
-                  style: TextStyle(fontSize: 32, color: Colors.green.shade200),
+                  style: AppTextStyle.style3,
                   text: "BIG ",
                   children: [
-                    TextSpan(
-                      text: "CART",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "Poppins",
-                        color: Colors.green.shade700,
-                      ),
-                    ),
+                    TextSpan(text: "CART", style: AppTextStyle.style4),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 10.h),
               SizedBox(
-                width: 330,
+                width: 330.w,
                 child: Text(
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy",
-                  style: TextStyle(fontSize: 15, fontFamily: "Poppins"),
+                  style: AppTextStyle.style5,
                 ),
               ),
             ],
@@ -163,10 +144,10 @@ class buildFirstPage extends StatelessWidget {
   }
 }
 
-class buildNextPage extends StatelessWidget {
+class BuildNextPage extends StatelessWidget {
   String text;
   String image;
-  buildNextPage({super.key, required this.text, required this.image});
+  BuildNextPage({super.key, required this.text, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -181,21 +162,21 @@ class buildNextPage extends StatelessWidget {
             spacing: 2,
             children: [
               SizedBox(
-                width: 270,
+                width: 270.w,
                 child: Text(
                   textAlign: TextAlign.center,
                   text,
-                  style: AppTextStyle.style,
+                  style: AppTextStyle.style1,
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               SizedBox(
-                width: 330,
+                width: 330.w,
                 child: Text(
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy",
-                  style: TextStyle(fontSize: 15, fontFamily: "Poppins"),
+                  style: AppTextStyle.style5,
                 ),
               ),
             ],
