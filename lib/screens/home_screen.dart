@@ -89,12 +89,12 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Color> colors = [
-    Color(0xFFE6F2EA),
-    Color(0xFFFFE9E5),
-    Color(0xFFFFF6E3),
-    Color(0xFFF3EFFA),
-    Color(0xFFDCF4F5),
-    Color(0xFFFFE8F2),
+    AppColors.color1,
+    AppColors.color2,
+    AppColors.color3,
+    AppColors.color4,
+    AppColors.color5,
+    AppColors.color6,
   ];
   @override
   Widget build(BuildContext context) {

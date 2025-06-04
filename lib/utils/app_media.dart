@@ -17,10 +17,18 @@ class AppMedia {
   static const String vegetable4 = "assets/images/grape.jpg";
   static const String vegetable5 = "assets/images/pomogeranete.jpg";
   static const String vegetable6 = "assets/images/brocoli.jpg";
+  static const String vegetable7 = "assets/images/brocoli.jpg";
 
   // Pngs
   static const String google = "assets/pngs/google.png";
 
   // Svgs
   static const String profil = "assets/svgs/profil.svg";
+  static const String category1 = "assets/svgs/vega.svg";
+  static const String category2 = "assets/svgs/fruit.svg";
+  static const String category3 = "assets/svgs/bvg.svg";
+  static const String category4 = "assets/svgs/grocery.svg";
+  static const String category5 = "assets/svgs/oil.svg";
+  static const String category6 = "assets/svgs/vacum.svg";
+  static const String category7 = "assets/svgs/baby.svg";
 }

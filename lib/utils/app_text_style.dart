@@ -74,4 +74,11 @@ class AppTextStyle {
     color: AppColors.text1,
     fontFamily: "Poppins",
   );
+  static TextStyle style14 = TextStyle(
+    color: AppColors.text2,
+    letterSpacing: 2,
+    fontFamily: "Poppins",
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+  );
 }
