@@ -5,7 +5,6 @@ import 'package:grocery_app/utils/app_text_style.dart';
 class LoginWidget extends StatelessWidget {
   final String text1;
   final String text2;
-
   const LoginWidget({super.key, required this.text1, required this.text2});
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:grocery_app/screens/home_screen.dart';
 import 'package:grocery_app/screens/login_screen.dart';
 import 'package:grocery_app/screens/onboarding_screen.dart';
 import 'package:grocery_app/screens/welcome_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const LoginScreen(),
+          home: const HomeScreen(),
         );
       },
     );

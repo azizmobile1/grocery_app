@@ -69,7 +69,7 @@ class OnboardingScreenState extends State<OnboardingScreen> {
                   );
                 }
               },
-              child: BuildTapWidget(text: "Get started"),
+              child: buildTap(),
             ),
           ),
           Align(
@@ -162,7 +162,7 @@ class BuildNextPage extends StatelessWidget {
             spacing: 2,
             children: [
               SizedBox(
-                width: 270.w,
+                width: 280.w,
                 child: Text(
                   textAlign: TextAlign.center,
                   text,
@@ -185,4 +185,25 @@ class BuildNextPage extends StatelessWidget {
       ],
     );
   }
+}
+
+Container buildTap() {
+  return Container(
+    alignment: Alignment.center,
+    padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 20.w),
+    margin: EdgeInsets.symmetric(horizontal: 16.w),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10.r),
+      color: AppColors.primaryDark,
+      boxShadow: [
+        BoxShadow(
+          spreadRadius: 0,
+          blurRadius: 6.r,
+          color: AppColors.primary.withOpacity(0.8),
+          offset: Offset(0, 7.h),
+        ),
+      ],
+    ),
+    child: Text("Get started", style: AppTextStyle.style2),
+  );
 }

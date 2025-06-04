@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/utils/app_colors.dart';
@@ -54,6 +55,23 @@ class AppTextStyle {
   static TextStyle style10 = TextStyle(
     color: AppColors.text2,
     fontWeight: FontWeight.bold,
+    fontFamily: "Poppins",
+    fontSize: 15.sp,
+  );
+  static TextStyle style11 = TextStyle(
+    color: AppColors.link,
+    fontWeight: FontWeight.w500,
+    fontSize: 15.sp,
+    fontFamily: "Poppins",
+  );
+  static TextStyle style12 = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.white,
+    backgroundColor: Colors.brown.shade600,
+  );
+  static TextStyle style13 = TextStyle(
+    fontSize: 13,
+    color: AppColors.text1,
     fontFamily: "Poppins",
   );
 }

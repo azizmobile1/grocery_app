@@ -17,8 +17,7 @@ class _BuildTapWidgetState extends State<BuildTapWidget> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 20.w),
-      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      padding: EdgeInsets.symmetric(vertical: 18.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.r),
         color: AppColors.primaryDark,
