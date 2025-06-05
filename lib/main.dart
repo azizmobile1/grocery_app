@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:grocery_app/screens/card_screen.dart';
 import 'package:grocery_app/screens/categories_screen.dart';
+import 'package:grocery_app/screens/favourite_screen.dart';
+import 'package:grocery_app/screens/filter_screen.dart';
 import 'package:grocery_app/screens/home_screen.dart';
 import 'package:grocery_app/screens/login_screen.dart';
 import 'package:grocery_app/screens/onboarding_screen.dart';
 import 'package:grocery_app/screens/product_detail_screen.dart';
+import 'package:grocery_app/screens/products_screen.dart';
 import 'package:grocery_app/screens/welcome_screen.dart';
 
 void main() {
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const ProductDetailScreen(),
+          home: const CardScreen(),
         );
       },
     );

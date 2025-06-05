@@ -8,6 +8,7 @@ import 'package:grocery_app/screens/categories_screen.dart';
 import 'package:grocery_app/screens/favourite_screen.dart';
 import 'package:grocery_app/screens/filter_screen.dart';
 import 'package:grocery_app/screens/product_detail_screen.dart';
+import 'package:grocery_app/screens/products_screen.dart';
 import 'package:grocery_app/screens/profile_screen.dart';
 import 'package:grocery_app/screens/vegetables_screen.dart';
 import 'package:grocery_app/utils/app_colors.dart';
@@ -174,7 +175,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
-                categoriesWidget(text: "Featured products"),
+                categoriesWidget(
+                  text: "Featured products",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProductsScreen(),
+                      ),
+                    );
+                  },
+                ),
                 Column(
                   spacing: 25,
                   children: [
@@ -349,7 +360,7 @@ class _HomeScreenState extends State<HomeScreen> {
             "\$$price",
             style: TextStyle(
               fontSize: 12.sp,
-              color: Colors.green,
+              color: AppColors.primaryDark,
               fontFamily: "Poppins",
             ),
           ),
@@ -378,7 +389,10 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.shopping_bag_outlined, color: Colors.green),
+                  Icon(
+                    Icons.shopping_bag_outlined,
+                    color: AppColors.primaryDark,
+                  ),
                   SizedBox(width: 8.w),
                   Text(
                     "Add to cart",
@@ -495,7 +509,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 margin: EdgeInsets.only(right: 10.w),
                 decoration: BoxDecoration(
                   color: selectedPageIndex == index
-                      ? Colors.green
+                      ? AppColors.primaryDark
                       : AppColors.white,
                   borderRadius: BorderRadius.circular(10.r),
                 ),

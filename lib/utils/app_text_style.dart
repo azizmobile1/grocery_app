@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/utils/app_colors.dart';
 
@@ -70,7 +69,7 @@ class AppTextStyle {
     backgroundColor: Colors.brown.shade600,
   );
   static TextStyle style13 = TextStyle(
-    fontSize: 13,
+    fontSize: 13.sp,
     color: AppColors.text1,
     fontFamily: "Poppins",
   );
@@ -80,5 +79,16 @@ class AppTextStyle {
     fontFamily: "Poppins",
     fontSize: 18.sp,
     fontWeight: FontWeight.w500,
+  );
+  static TextStyle style15 = TextStyle(
+    color: AppColors.primaryDark,
+    fontWeight: FontWeight.w600,
+    fontSize: 15.sp,
+  );
+  static TextStyle style16 = TextStyle(
+    color: AppColors.text1,
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w400,
+    overflow: TextOverflow.ellipsis,
   );
 }

@@ -17,10 +17,11 @@ class AppMedia {
   static const String vegetable4 = "assets/images/grape.jpg";
   static const String vegetable5 = "assets/images/pomogeranete.jpg";
   static const String vegetable6 = "assets/images/brocoli.jpg";
-  static const String vegetable7 = "assets/images/brocoli.jpg";
+  static const String lemon = "assets/images/productImage.jpg";
 
   // Pngs
   static const String google = "assets/pngs/google.png";
+  static const String productImage = "assets/pngs/lemon.png";
 
   // Svgs
   static const String profil = "assets/svgs/profil.svg";

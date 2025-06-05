@@ -95,7 +95,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 SizedBox(width: 5.w),
                 Container(
                   width: 105.w,
-                  height: 121.h,
+                  height: 125.h,
                   padding: EdgeInsets.symmetric(vertical: 12.h),
                   color: AppColors.white,
                   child: Column(
