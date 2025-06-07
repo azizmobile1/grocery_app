@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/screens/card_screen.dart';
-import 'package:grocery_app/screens/categories_screen.dart';
-import 'package:grocery_app/screens/favourite_screen.dart';
-import 'package:grocery_app/screens/filter_screen.dart';
-import 'package:grocery_app/screens/home_screen.dart';
+import 'package:grocery_app/screens/forgot_password_screen.dart';
 import 'package:grocery_app/screens/login_screen.dart';
 import 'package:grocery_app/screens/onboarding_screen.dart';
-import 'package:grocery_app/screens/product_detail_screen.dart';
-import 'package:grocery_app/screens/products_screen.dart';
-import 'package:grocery_app/screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());

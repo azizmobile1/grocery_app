@@ -18,6 +18,7 @@ class _CardScreenState extends State<CardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.text1,
       appBar: AppBar(
         backgroundColor: AppColors.white,
         toolbarHeight: 80.h,
@@ -47,103 +48,101 @@ class _CardScreenState extends State<CardScreen> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-          child: Column(
-            spacing: 10,
-            children: [
-              cardFavoriteWidget(
-                color: AppColors.color6,
-                img: AppMedia.vegetable6,
-                text: "Fresh Broccoli",
-              ),
-              cardFavoriteWidget(
-                color: AppColors.color4,
-                img: AppMedia.vegetable4,
-                text: "Black Grapes",
-              ),
-              cardFavoriteWidget(
-                color: AppColors.color2,
-                img: AppMedia.vegetable2,
-                text: "Avacado",
-              ),
-              cardFavoriteWidget(
-                color: AppColors.color3,
-                img: AppMedia.vegetable3,
-                text: "Pinapple",
-              ),
-              Spacer(),
-              Container(
-                color: AppColors.white,
-                width: double.infinity,
-                padding: EdgeInsets.all(15.r),
-                child: Column(
-                  spacing: 5.h,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Subtotal",
-                          textAlign: TextAlign.center,
-                          style: AppTextStyle.style13,
-                        ),
-                        Spacer(),
-                        Text(
-                          "\$56.7",
-                          textAlign: TextAlign.center,
-                          style: AppTextStyle.style13,
-                        ),
-                      ],
-                    ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+        child: Column(
+          spacing: 10.h,
+          children: [
+            cardFavoriteWidget(
+              color: AppColors.color6,
+              img: AppMedia.vegetable6,
+              text: "Fresh Broccoli",
+            ),
+            cardFavoriteWidget(
+              color: AppColors.color4,
+              img: AppMedia.vegetable4,
+              text: "Black Grapes",
+            ),
+            cardFavoriteWidget(
+              color: AppColors.color2,
+              img: AppMedia.vegetable2,
+              text: "Avacado",
+            ),
+            cardFavoriteWidget(
+              color: AppColors.color3,
+              img: AppMedia.vegetable3,
+              text: "Pinapple",
+            ),
+            Spacer(),
+            Container(
+              color: AppColors.white,
+              width: double.infinity,
+              padding: EdgeInsets.all(15.r),
+              child: Column(
+                spacing: 5.h,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        "Subtotal",
+                        textAlign: TextAlign.center,
+                        style: AppTextStyle.style13,
+                      ),
+                      Spacer(),
+                      Text(
+                        "\$56.7",
+                        textAlign: TextAlign.center,
+                        style: AppTextStyle.style13,
+                      ),
+                    ],
+                  ),
 
-                    Row(
-                      children: [
-                        Text(
-                          "Shopping Charges",
-                          textAlign: TextAlign.center,
-                          style: AppTextStyle.style13,
+                  Row(
+                    children: [
+                      Text(
+                        "Shopping Charges",
+                        textAlign: TextAlign.center,
+                        style: AppTextStyle.style13,
+                      ),
+                      Spacer(),
+                      Text(
+                        "\$1.6",
+                        textAlign: TextAlign.center,
+                        style: AppTextStyle.style13,
+                      ),
+                    ],
+                  ),
+                  Divider(),
+                  Row(
+                    children: [
+                      Text(
+                        "Total",
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                      Spacer(),
+                      Text(
+                        "\$58.2",
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ShoppingMethodScreen();
+                          },
                         ),
-                        Spacer(),
-                        Text(
-                          "\$1.6",
-                          textAlign: TextAlign.center,
-                          style: AppTextStyle.style13,
-                        ),
-                      ],
-                    ),
-                    Divider(),
-                    Row(
-                      children: [
-                        Text(
-                          "Total",
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                        Spacer(),
-                        Text(
-                          "\$58.2",
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                      ],
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return ShoppingMethodScreen();
-                            },
-                          ),
-                        );
-                      },
-                      child: BuildTapWidget(text: "Checkout"),
-                    ),
-                  ],
-                ),
+                      );
+                    },
+                    child: BuildTapWidget(text: "Checkout"),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -156,56 +155,67 @@ Container cardFavoriteWidget({
   required String text,
 }) {
   return Container(
-    padding: EdgeInsets.all(10.r),
+    width: 350.w,
+    height: 105.h,
+    padding: EdgeInsets.symmetric(horizontal: 10.w),
     color: AppColors.white,
     child: Row(
-      spacing: 20.h,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          width: 60.w,
+          width: 50.w,
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              CircleAvatar(backgroundColor: color, radius: 40.r),
+              CircleAvatar(backgroundColor: color, radius: 50.r),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 15.h),
+                  padding: EdgeInsets.only(top: 7.h),
                   child: Image.asset(img, fit: BoxFit.cover),
                 ),
               ),
             ],
           ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "\$2.22 x 4",
-              style: TextStyle(fontSize: 10.sp, color: AppColors.primary),
-            ),
-            Text(
-              text,
-              style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w500),
-            ),
-            Text(
-              "1.50lbs",
-              textAlign: TextAlign.center,
-              style: AppTextStyle.style13,
-            ),
-          ],
+        SizedBox(width: 20.w),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "\$2.22 x 4",
+                style: AppTextStyle.style17,
+                overflow: TextOverflow.ellipsis,
+              ),
+              SizedBox(height: 4.h),
+              Text(
+                text,
+                style: AppTextStyle.style10,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+              ),
+              SizedBox(height: 4.h),
+              Text(
+                "1.50lbs",
+                textAlign: TextAlign.center,
+                style: AppTextStyle.style13,
+              ),
+            ],
+          ),
         ),
-        Spacer(),
+        SizedBox(width: 10.w),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.add, color: AppColors.primary),
+              icon: Icon(Icons.add, color: AppColors.primaryDark),
             ),
             Text("5", textAlign: TextAlign.center, style: AppTextStyle.style13),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.remove, color: AppColors.primary),
+              icon: Icon(Icons.remove, color: AppColors.primaryDark),
             ),
           ],
         ),

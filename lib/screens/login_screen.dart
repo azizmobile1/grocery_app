@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:grocery_app/screens/forgot_password_screen.dart';
 import 'package:grocery_app/screens/home_screen.dart';
 import 'package:grocery_app/screens/signup_screen.dart';
 import 'package:grocery_app/screens/welcome_screen.dart';
@@ -118,7 +119,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       Text("Remember me", style: AppTextStyle.style8),
                       SizedBox(width: 15.w),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ForgotPasswordScreen(),
+                            ),
+                          );
+                        },
                         style: ButtonStyle(
                           overlayColor: MaterialStateProperty.all(
                             AppColors.link.withOpacity(0.2),

@@ -91,4 +91,10 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     overflow: TextOverflow.ellipsis,
   );
+  static TextStyle style17 = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.primaryDark,
+    fontWeight: FontWeight.w500,
+    fontFamily: "Poppins",
+  );
 }

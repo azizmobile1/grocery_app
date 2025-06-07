@@ -6,7 +6,6 @@ import 'package:grocery_app/screens/welcome_screen.dart';
 import 'package:grocery_app/utils/app_colors.dart';
 import 'package:grocery_app/utils/app_media.dart';
 import 'package:grocery_app/utils/app_text_style.dart';
-import 'package:grocery_app/widgets/build_tap_widget.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

@@ -10,6 +10,6 @@ class ShoppingMethodScreen extends StatefulWidget {
 class _ShoppingMethodScreenState extends State<ShoppingMethodScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("SHopping Method Screen")));
+    return Scaffold(body: Center(child: Text("Shopping Method Screen")));
   }
 }

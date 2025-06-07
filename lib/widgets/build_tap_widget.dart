@@ -16,6 +16,8 @@ class _BuildTapWidgetState extends State<BuildTapWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 60.h,
+      width: 350.w,
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(vertical: 18.h),
       decoration: BoxDecoration(
